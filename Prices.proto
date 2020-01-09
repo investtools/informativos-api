@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package informativos;
+
+service Prices {
+  rpc GetPrices(GetPricesReq) returns (stream Price) { }
+}
+
+message GetPricesReq {
+  uint64 updated_since = 1;
+}
+
+message Price {
+  string id = 1;
+  string security = 2;
+  uint64 settlement_date = 3;
+  uint64 date = 4;
+  double close = 5;
+  double open = 6;
+  double high = 7;
+  double low = 8;
+  double average = 9;
+  double bid = 10;
+  double ask = 11;
+  double volume = 12;
+  double quantity = 13;
+  double trades = 14;
+  double change = 15;
+  float a_change = 16;
+  string origin = 17;
+  uint64 updated_at = 18;
+}
