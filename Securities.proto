@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package informativos;
+
+service Securities {
+  rpc GetSecurities(GetSecuritiesReq) returns (stream Security) { }
+}
+
+message GetSecuritiesReq {
+  uint64 updated_since = 1;
+}
+
+message Security {
+  string id = 1;
+  string name = 2;
+  string isin = 3;
+  string symbol = 4;
+  bool is_ibov = 5;
+  string security_type = 6;
+  string spec = 7;
+  uint64 settlement_date = 8;
+  uint64 updated_at = 9;
+}
