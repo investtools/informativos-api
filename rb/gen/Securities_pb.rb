@@ -9,15 +9,28 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :updated_since, :uint64, 1
     end
     add_message "informativos.Security" do
-      optional :id, :string, 1
-      optional :name, :string, 2
-      optional :isin, :string, 3
-      optional :symbol, :string, 4
-      optional :is_ibov, :bool, 5
-      optional :security_type, :string, 6
-      optional :spec, :string, 7
-      optional :settlement_date, :uint64, 8
-      optional :updated_at, :uint64, 9
+      optional :updated_at, :uint64, 1
+      optional :id, :string, 2
+      optional :name, :string, 3
+      optional :isin, :string, 4
+      optional :symbol, :string, 5
+      optional :is_ibov, :bool, 6
+      optional :type, :enum, 7, "informativos.Security.Type"
+      optional :spec, :string, 8
+      optional :settlement_date, :uint64, 9
+      optional :underlying_security, :string, 10
+    end
+    add_enum "informativos.Security.Type" do
+      value :UNDEFINED, 0
+      value :NOT_MAPPED, 1
+      value :LFT, 2
+      value :LTN, 3
+      value :NTNB, 4
+      value :NTNC, 5
+      value :NTNF, 6
+      value :OPTION, 7
+      value :STOCK, 8
+      value :TERM, 9
     end
   end
 end
@@ -25,4 +38,5 @@ end
 module Informativos
   GetSecuritiesReq = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetSecuritiesReq").msgclass
   Security = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Security").msgclass
+  Security::Type = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Security.Type").enummodule
 end

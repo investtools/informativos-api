@@ -11,22 +11,22 @@ message GetPricesReq {
 }
 
 message Price {
-  string id = 1;
-  string security = 2;
-  uint64 settlement_date = 3;
-  uint64 date = 4;
-  double close = 5;
-  double open = 6;
-  double high = 7;
-  double low = 8;
-  double average = 9;
-  double bid = 10;
-  double ask = 11;
-  double volume = 12;
-  double quantity = 13;
-  double trades = 14;
-  double change = 15;
-  float a_change = 16;
-  string origin = 17;
-  uint64 updated_at = 18;
+  uint64 updated_at = 1;
+  string id = 2;
+  string security = 3;
+  uint64 settlement_date = 4;
+  uint64 date = 5;
+  double close = 6;
+  double open = 7;
+  double high = 8;
+  double low = 9;
+  double average = 10;
+  double bid = 11;
+  double ask = 12;
+  double volume = 13;
+  double quantity = 14;
+  double trades = 15;
+  double change = 16;
+  float a_change = 17;
+  string origin = 18;
 }

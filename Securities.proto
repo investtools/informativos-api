@@ -10,14 +10,28 @@ message GetSecuritiesReq {
   uint64 updated_since = 1;
 }
 
+
 message Security {
-  string id = 1;
-  string name = 2;
-  string isin = 3;
-  string symbol = 4;
-  bool is_ibov = 5;
-  string security_type = 6;
-  string spec = 7;
-  uint64 settlement_date = 8;
-  uint64 updated_at = 9;
+  enum Type {
+    UNDEFINED = 0;
+    NOT_MAPPED = 1;
+    LFT = 2;
+    LTN = 3;
+    NTNB = 4;
+    NTNC = 5;
+    NTNF = 6;
+    OPTION = 7;
+    STOCK = 8;
+    TERM = 9;
+  }
+  uint64 updated_at = 1;
+  string id = 2;
+  string name = 3;
+  string isin = 4;
+  string symbol = 5;
+  bool is_ibov = 6;
+  Type type = 7;
+  string spec = 8;
+  uint64 settlement_date = 9;
+  string underlying_security = 10;
 }
