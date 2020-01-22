@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+package informativos;
+
+service CorporateActions {
+  rpc GetCorporateActions(GetCorporateActionsReq)
+      returns (stream CorporateAction) {}
+}
+
+message GetCorporateActionsReq {
+  enum Type {
+    DIVIDEND = 0;
+    INTEREST_ON_OWN_CAPITAL_ISSUE = 1;
+    SPLIT = 2;
+    REVERSE_SPLIT = 3;
+    BONUS_ISSUE = 4;
+    SUBSCRIPTION_RIGHT = 5;
+    AMORTIZATION = 6;
+  }
+  uint64 updated_since = 1;
+  Type type = 2;
+}
+
+message Dividend {
+  uint64 base_date = 1;
+  uint64 ex_date = 2;
+  uint64 liquidation_date = 3;
+  double value = 4;
+  string security = 5;
+}
+
+message InterestOnOwnCapitalIssue {
+  uint64 base_date = 1;
+  uint64 ex_date = 2;
+  uint64 liquidation_date = 3;
+  double value = 4;
+  string security = 5;
+}
+message Split {
+  uint64 date = 1;
+  uint64 ex_date = 2;
+  double factor = 3;
+  string security = 4;
+}
+message ReverseSplit {
+  uint64 date = 1;
+  uint64 ex_date = 2;
+  double factor = 3;
+  string security = 4;
+}
+message BonusIssue {
+  uint64 date = 1;
+  uint64 ex_date = 2;
+  double factor = 3;
+  string security = 4;
+}
+message SubscriptionRight {
+  uint64 date = 1;
+  uint64 ex_date = 2;
+  uint64 maturity_date = 3;
+  double factor = 4;
+  double strike = 5;
+  string security = 6;
+  string target_security = 7;
+}
+message Amortization {
+  uint64 base_date = 1;
+  uint64 ex_date = 2;
+  uint64 liquidation_date = 3;
+  double value = 4;
+  string security = 5;
+}
+
+message CorporateAction {
+  uint64 updated_at = 1;
+  string id = 2;
+  oneof type {
+    Dividend dividend = 3;
+    InterestOnOwnCapitalIssue interest_on_own_capital_issue = 4;
+    Split split = 5;
+    ReverseSplit reverse_split = 6;
+    BonusIssue bonus_issue = 7;
+    SubscriptionRight subscription_right = 8;
+    Amortization amortization = 9;
+  }
+}
