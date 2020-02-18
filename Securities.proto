@@ -23,6 +23,8 @@ message Security {
     OPTION = 7;
     STOCK = 8;
     TERM = 9;
+    SUBSCRIPTION_RIGHT = 10;
+    SUBSCRIPTION_RECEIPT = 11;
   }
   uint64 updated_at = 1;
   string id = 2;

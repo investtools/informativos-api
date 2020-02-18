@@ -32,6 +32,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
 end
 
 module Informativos
-  GetPricesReq = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetPricesReq").msgclass
-  Price = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Price").msgclass
+  GetPricesReq = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetPricesReq").msgclass
+  Price = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Price").msgclass
 end

@@ -83,14 +83,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
 end
 
 module Informativos
-  GetCorporateActionsReq = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetCorporateActionsReq").msgclass
-  GetCorporateActionsReq::Type = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetCorporateActionsReq.Type").enummodule
-  Dividend = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Dividend").msgclass
-  InterestOnOwnCapitalIssue = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.InterestOnOwnCapitalIssue").msgclass
-  Split = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Split").msgclass
-  ReverseSplit = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.ReverseSplit").msgclass
-  BonusIssue = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.BonusIssue").msgclass
-  SubscriptionRight = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.SubscriptionRight").msgclass
-  Amortization = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Amortization").msgclass
-  CorporateAction = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.CorporateAction").msgclass
+  GetCorporateActionsReq = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetCorporateActionsReq").msgclass
+  GetCorporateActionsReq::Type = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetCorporateActionsReq.Type").enummodule
+  Dividend = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Dividend").msgclass
+  InterestOnOwnCapitalIssue = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.InterestOnOwnCapitalIssue").msgclass
+  Split = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Split").msgclass
+  ReverseSplit = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.ReverseSplit").msgclass
+  BonusIssue = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.BonusIssue").msgclass
+  SubscriptionRight = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.SubscriptionRight").msgclass
+  Amortization = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Amortization").msgclass
+  CorporateAction = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.CorporateAction").msgclass
 end

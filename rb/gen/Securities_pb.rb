@@ -31,12 +31,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :OPTION, 7
       value :STOCK, 8
       value :TERM, 9
+      value :SUBSCRIPTION_RIGHT, 10
+      value :SUBSCRIPTION_RECEIPT, 11
     end
   end
 end
 
 module Informativos
-  GetSecuritiesReq = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetSecuritiesReq").msgclass
-  Security = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Security").msgclass
-  Security::Type = Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Security.Type").enummodule
+  GetSecuritiesReq = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetSecuritiesReq").msgclass
+  Security = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Security").msgclass
+  Security::Type = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Security.Type").enummodule
 end
