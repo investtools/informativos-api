@@ -33,6 +33,15 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :TERM, 9
       value :SUBSCRIPTION_RIGHT, 10
       value :SUBSCRIPTION_RECEIPT, 11
+      value :FUND, 12
+      value :FUTURE, 13
+      value :BDR, 14
+      value :FII, 15
+      value :ETF, 16
+      value :BONUS, 17
+      value :INDEX, 18
+      value :EXCHANGE_RATE, 19
+      value :GOVERNMENT_BOND, 20
     end
   end
 end

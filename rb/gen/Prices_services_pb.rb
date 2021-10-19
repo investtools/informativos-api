@@ -8,13 +8,13 @@ module Informativos
   module Prices
     class Service
 
-      include GRPC::GenericService
+      include ::GRPC::GenericService
 
       self.marshal_class_method = :encode
       self.unmarshal_class_method = :decode
       self.service_name = 'informativos.Prices'
 
-      rpc :GetPrices, GetPricesReq, stream(Price)
+      rpc :GetPrices, ::Informativos::GetPricesReq, stream(::Informativos::Price)
     end
 
     Stub = Service.rpc_stub_class

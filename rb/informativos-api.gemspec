@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["breno@investtools.com.br"]
   spec.summary       = %q{Informativos API}
   spec.description   = %q{Informativos API}
-  spec.homepage      = "https://api.informtivos.io/"
+  spec.homepage      = "https://api.informativos.io/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

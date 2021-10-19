@@ -8,13 +8,13 @@ module Informativos
   module CorporateActions
     class Service
 
-      include GRPC::GenericService
+      include ::GRPC::GenericService
 
       self.marshal_class_method = :encode
       self.unmarshal_class_method = :decode
       self.service_name = 'informativos.CorporateActions'
 
-      rpc :GetCorporateActions, GetCorporateActionsReq, stream(CorporateAction)
+      rpc :GetCorporateActions, ::Informativos::GetCorporateActionsReq, stream(::Informativos::CorporateAction)
     end
 
     Stub = Service.rpc_stub_class

@@ -8,13 +8,13 @@ module Informativos
   module Securities
     class Service
 
-      include GRPC::GenericService
+      include ::GRPC::GenericService
 
       self.marshal_class_method = :encode
       self.unmarshal_class_method = :decode
       self.service_name = 'informativos.Securities'
 
-      rpc :GetSecurities, GetSecuritiesReq, stream(Security)
+      rpc :GetSecurities, ::Informativos::GetSecuritiesReq, stream(::Informativos::Security)
     end
 
     Stub = Service.rpc_stub_class
