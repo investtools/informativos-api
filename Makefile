@@ -1,3 +1,4 @@
+GEM := informativos-api
 FILE := version.txt
 VERSION := `cat $(FILE)`
 
@@ -9,7 +10,11 @@ up:
 build: rb/*.gemspec version.txt
 	gem build rb/informativos-api.gemspec 
 
-publish: build
+push: build
+	gem push rb/informativos-api-$(VERSION).gem
+
+repush: build
+	gem yarn $(GEM) -v $(VERSION)
 	gem push rb/informativos-api-$(VERSION).gem
 
 rb/gen: *.proto
