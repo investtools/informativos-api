@@ -15,5 +15,5 @@ message Issuer {
   string id = 2;
   string name = 3;
   string code = 4;
-  string country_code = 4;
+  string country_code = 5;
 }

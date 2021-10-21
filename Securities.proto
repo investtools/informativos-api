@@ -8,7 +8,7 @@ service Securities {
 
 message GetSecuritiesReq {
   uint64 updated_since = 1;
-  string origin = 1;
+  string origin = 2;
 }
 
 message Security {

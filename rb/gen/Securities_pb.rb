@@ -7,6 +7,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("Securities.proto", :syntax => :proto3) do
     add_message "informativos.GetSecuritiesReq" do
       optional :updated_since, :uint64, 1
+      optional :origin, :string, 2
     end
     add_message "informativos.Security" do
       optional :updated_at, :uint64, 1
@@ -19,6 +20,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :spec, :string, 8
       optional :settlement_date, :uint64, 9
       optional :underlying_security, :string, 10
+      optional :issuer_code, :string, 11
     end
     add_enum "informativos.Security.Type" do
       value :UNDEFINED, 0
