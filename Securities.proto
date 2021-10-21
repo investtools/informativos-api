@@ -45,4 +45,5 @@ message Security {
   string spec = 8;
   uint64 settlement_date = 9;
   string underlying_security = 10;
+  string issuer_code = 11;
 }

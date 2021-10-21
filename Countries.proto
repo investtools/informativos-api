@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package informativos;
+
+service Countries {
+  rpc GetCountries(GetCountriesReq) returns (stream Country) { }
+}
+
+message GetCountriesReq {
+  uint64 updated_since = 1;
+}
+
+message Country {
+  uint64 updated_at = 1;
+  string id = 2;
+  string name = 3;
+  string code = 4;
+}
