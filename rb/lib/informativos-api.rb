@@ -1,3 +1,6 @@
 require 'Prices_services_pb'
 require 'Securities_services_pb'
 require 'CorporateActions_services_pb'
+require 'Countries_services_pb'
+require 'Currencies_services_pb'
+require 'Issuers_services_pb'

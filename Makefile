@@ -13,6 +13,9 @@ build: rb/*.gemspec version.txt
 push: build
 	gem push rb/informativos-api-$(VERSION).gem
 
+remove:
+	gem yarn $(GEM) -v $(VERSION)
+
 repush: build
 	gem yarn $(GEM) -v $(VERSION)
 	gem push rb/informativos-api-$(VERSION).gem
