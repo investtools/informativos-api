@@ -9,6 +9,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :updated_since, :uint64, 1
       optional :origin, :string, 2
     end
+    add_message "informativos.GetSecurityMarketInfosReq" do
+      optional :updated_since, :uint64, 1
+      optional :origin, :string, 2
+      optional :security_type, :string, 3
+    end
     add_message "informativos.Security" do
       optional :updated_at, :uint64, 1
       optional :id, :string, 2
@@ -45,11 +50,21 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :EXCHANGE_RATE, 19
       value :GOVERNMENT_BOND, 20
     end
+    add_message "informativos.SecurityMarketInfo" do
+      optional :updated_at, :uint64, 1
+      optional :id, :string, 2
+      optional :on_quantity, :uint64, 3
+      optional :pn_quantity, :uint64, 4
+      optional :date, :uint64, 5
+      optional :issuer_code, :string, 6
+    end
   end
 end
 
 module Informativos
   GetSecuritiesReq = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetSecuritiesReq").msgclass
+  GetSecurityMarketInfosReq = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetSecurityMarketInfosReq").msgclass
   Security = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Security").msgclass
   Security::Type = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Security.Type").enummodule
+  SecurityMarketInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.SecurityMarketInfo").msgclass
 end

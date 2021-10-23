@@ -7,10 +7,10 @@ all: rb/gen
 up:
 	docker-compose run --rm app bash
 
-build: rb/*.gemspec version.txt
+build: rb/gen rb/*.gemspec version.txt
 	gem build rb/informativos-api.gemspec 
 
-push: build
+push: build version.txt
 	gem push rb/informativos-api-$(VERSION).gem
 
 remove:

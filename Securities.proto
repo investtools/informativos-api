@@ -4,6 +4,7 @@ package informativos;
 
 service Securities {
   rpc GetSecurities(GetSecuritiesReq) returns (stream Security) { }
+  rpc GetSecurityMarketInfos(GetSecurityMarketInfosReq) returns (stream SecurityMarketInfo) { }
 }
 
 message GetSecuritiesReq {
@@ -14,7 +15,7 @@ message GetSecuritiesReq {
 message GetSecurityMarketInfosReq {
   uint64 updated_since = 1;
   string origin = 2;
-  string security_type = 2;
+  string security_type = 3;
 }
 
 message Security {
