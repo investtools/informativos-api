@@ -11,8 +11,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "informativos.Holiday" do
       optional :updated_at, :uint64, 1
       optional :id, :string, 2
-      optional :date, :uint64, 3
-      optional :market_code, :string, 4
+      optional :name, :string, 3
+      optional :date, :uint64, 4
+      optional :market_code, :string, 5
     end
   end
 end

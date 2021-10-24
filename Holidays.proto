@@ -13,6 +13,7 @@ message GetHolidaysReq {
 message Holiday {
   uint64 updated_at = 1;
   string id = 2;
-  uint64 date = 3;
-  string market_code = 4;
+  string name = 3;
+  uint64 date = 4;
+  string market_code = 5;
 }
