@@ -54,8 +54,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :id, :string, 2
       optional :on_quantity, :uint64, 3
       optional :pn_quantity, :uint64, 4
-      optional :date, :uint64, 5
-      optional :issuer_code, :string, 6
+      optional :total_quantity, :uint64, 5
+      optional :date, :uint64, 6
+      optional :issuer_code, :string, 7
+      optional :security_prefix, :string, 8
     end
   end
 end

@@ -59,6 +59,8 @@ message SecurityMarketInfo {
   string id = 2;
   uint64 on_quantity = 3;
   uint64 pn_quantity = 4;
-  uint64 date = 5;
-  string issuer_code = 6;
+  uint64 total_quantity = 5;
+  uint64 date = 6;
+  string issuer_code = 7;
+  string security_prefix = 8;
 }
