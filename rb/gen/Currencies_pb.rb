@@ -13,6 +13,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :id, :string, 2
       optional :name, :string, 3
       optional :code, :string, 4
+      optional :symbol, :string, 5
     end
   end
 end

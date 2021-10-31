@@ -15,4 +15,5 @@ message Currency {
   string id = 2;
   string name = 3;
   string code = 4;
+  string symbol = 5;
 }
