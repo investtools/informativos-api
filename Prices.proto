@@ -8,6 +8,9 @@ service Prices {
 
 message GetPricesReq {
   uint64 updated_since = 1;
+  string origin = 2;
+  string security_type = 3;
+  uint64 date_since = 4;
 }
 
 message Price {

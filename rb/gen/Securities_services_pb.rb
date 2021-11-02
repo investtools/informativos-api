@@ -15,6 +15,7 @@ module Informativos
       self.service_name = 'informativos.Securities'
 
       rpc :GetSecurities, ::Informativos::GetSecuritiesReq, stream(::Informativos::Security)
+      rpc :GetSecurityMarketInfos, ::Informativos::GetSecurityMarketInfosReq, stream(::Informativos::SecurityMarketInfo)
     end
 
     Stub = Service.rpc_stub_class

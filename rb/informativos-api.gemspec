@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Breno Perricone Fischer"]
   spec.email         = ["breno@investtools.com.br"]
   spec.summary       = %q{Informativos API}
-  spec.description   = %q{Informativos API}
+  spec.description   = %q{Informativos API wusing grpc protocol}
   spec.homepage      = "https://api.informativos.io/"
   spec.license       = "MIT"
 

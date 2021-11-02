@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package informativos;
+
+service Issuers {
+  rpc GetIssuers(GetIssuersReq) returns (stream Issuer) { }
+}
+
+message GetIssuersReq {
+  uint64 updated_since = 1;
+}
+
+message Issuer {
+  uint64 updated_at = 1;
+  string id = 2;
+  string name = 3;
+  string code = 4;
+  string country_code = 5;
+}

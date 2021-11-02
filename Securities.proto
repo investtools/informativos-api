@@ -4,9 +4,16 @@ package informativos;
 
 service Securities {
   rpc GetSecurities(GetSecuritiesReq) returns (stream Security) { }
+  rpc GetSecurityMarketInfos(GetSecurityMarketInfosReq) returns (stream SecurityMarketInfo) { }
 }
 
 message GetSecuritiesReq {
+  uint64 updated_since = 1;
+  string origin = 2;
+  string security_type = 3;
+}
+
+message GetSecurityMarketInfosReq {
   uint64 updated_since = 1;
 }
 
@@ -44,4 +51,16 @@ message Security {
   string spec = 8;
   uint64 settlement_date = 9;
   string underlying_security = 10;
+  string issuer_code = 11;
+}
+
+message SecurityMarketInfo {
+  uint64 updated_at = 1;
+  string id = 2;
+  uint64 on_quantity = 3;
+  uint64 pn_quantity = 4;
+  uint64 total_quantity = 5;
+  uint64 date = 6;
+  string issuer_code = 7;
+  string security_prefix = 8;
 }

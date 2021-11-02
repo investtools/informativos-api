@@ -7,6 +7,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("Prices.proto", :syntax => :proto3) do
     add_message "informativos.GetPricesReq" do
       optional :updated_since, :uint64, 1
+      optional :origin, :string, 2
+      optional :security_type, :string, 3
+      optional :date_since, :uint64, 4
     end
     add_message "informativos.Price" do
       optional :updated_at, :uint64, 1
