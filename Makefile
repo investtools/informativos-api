@@ -21,7 +21,7 @@ push: build version.txt
 	gem push rb/informativos-api-$(VERSION).gem
 
 remove:
-	gem yarn $(GEM) -v $(VERSION)
+	gem yank $(GEM) -v $(VERSION)
 
 repush: build
 	gem yarn $(GEM) -v $(VERSION)
