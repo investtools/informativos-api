@@ -4,6 +4,18 @@ package informativos;
 
 service Holidays {
   rpc GetHolidays(GetHolidaysReq) returns (stream Holiday) { }
+  rpc Advance(AdvanceReq) returns (AdvanceHoliday) { }
+}
+
+message AdvanceReq {
+  required string holiday_market = 1;
+  required string date = 2;
+  required uint64 n = 3;
+}
+
+message AdvanceHoliday {
+  string date = 1;
+
 }
 
 message GetHolidaysReq {

@@ -5,6 +5,13 @@ require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("Holidays.proto", :syntax => :proto3) do
+    add_message "informativos.AdvanceReq" do
+      optional :holiday_market, :string, 1
+      optional :date, :string, 2
+      optional :n, :uint64, 3
+    end
+    add_message "informativos.AdvanceHoliday" do
+    end
     add_message "informativos.GetHolidaysReq" do
       optional :updated_since, :uint64, 1
     end
@@ -19,6 +26,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
 end
 
 module Informativos
+  AdvanceReq = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.AdvanceReq").msgclass
+  AdvanceHoliday = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.AdvanceHoliday").msgclass
   GetHolidaysReq = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.GetHolidaysReq").msgclass
   Holiday = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("informativos.Holiday").msgclass
 end

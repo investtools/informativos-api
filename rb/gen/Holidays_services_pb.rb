@@ -15,6 +15,7 @@ module Informativos
       self.service_name = 'informativos.Holidays'
 
       rpc :GetHolidays, ::Informativos::GetHolidaysReq, stream(::Informativos::Holiday)
+      rpc :Advance, ::Informativos::AdvanceReq, ::Informativos::AdvanceHoliday
     end
 
     Stub = Service.rpc_stub_class
