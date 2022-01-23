@@ -10,7 +10,7 @@ message GetPricesReq {
   uint64 updated_since = 1;
   string origin = 2;
   string security_type = 3;
-  uint64 date_since = 4;
+  uint64 date = 4;
 }
 
 message Price {
@@ -33,3 +33,4 @@ message Price {
   float a_change = 17;
   string origin = 18;
 }
+
