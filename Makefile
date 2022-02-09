@@ -14,19 +14,19 @@ up:
 clean:
 	rm -rf $(GEM_FILES)
 
-build: rb/gen rb/*.gemspec version.txt
-	gem build rb/informativos-api.gemspec 
+build: gen/ *.gemspec version.txt
+	gem build informativos-api.gemspec 
 
 push: build version.txt
-	gem push rb/informativos-api-$(VERSION).gem
+	gem push informativos-api-$(VERSION).gem
 
 remove:
 	gem yank $(GEM) -v $(VERSION)
 
 repush: build
 	gem yarn $(GEM) -v $(VERSION)
-	gem push rb/informativos-api-$(VERSION).gem
+	gem push informativos-api-$(VERSION).gem
 
-rb/gen: *.proto
+gen: *.proto
 	gem list "^grpc-tools$$" -i || gem install grpc-tools
-	grpc_tools_ruby_protoc --ruby_out=./rb/gen --grpc_out=./rb/gen $(PROTO_FILES)
+	grpc_tools_ruby_protoc --ruby_out=./gen --grpc_out=./gen $(PROTO_FILES)

@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "informativos-api"
-  spec.version       = File.read(File.expand_path('../../version.txt', __FILE__))
+  spec.version       = File.read(File.expand_path('../version.txt', __FILE__))
   spec.authors       = ["Breno Perricone Fischer"]
   spec.email         = ["breno@investtools.com.br"]
   spec.summary       = %q{Informativos API}
